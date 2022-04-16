@@ -165,14 +165,18 @@ function App() {
   const deleteHAndeler = (ID) => {
     setMovies(movies.filter((e) => e.id !== ID));
   };
+   /* Sort by Title of movies*/ 
   const sortHandler = () => {
 
    setMovies ([...movies].sort((a, b) => a.title > b.title ? 1 : -1))
  }
+  /*Sort by Rating Descendant*/
  const sortByRateUp = () => {
 
   setMovies ([...movies].sort((a, b) => b.rating - a.rating))
  }
+ /*Sort by Rating Ascendant*/
+ 
  const sortByRateDown = () => {
 
   setMovies ([...movies].sort((a, b) => a.rating - b.rating))
